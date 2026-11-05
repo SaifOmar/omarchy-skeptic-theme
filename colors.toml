@@ -1,0 +1,37 @@
+mode = "dark"
+
+# Chrome uses the theme's text tan (naysayer's mode-line) instead of white.
+accent = "#d1b897"
+cursor = "#ffffff"
+foreground = "#d1b897"
+background = "#062329"
+selection_foreground = "#ffffff"
+selection_background = "#1c5a63"
+
+dark_background = "#051e23"
+darker_background = "#041a1d"
+lighter_background = "#0b3335"
+
+dark_foreground = "#8a7f6a"
+light_foreground = "#e6d9c3"
+bright_foreground = "#ffffff"
+
+# Semantic colours from naysayer-theme.el
+red = "#d1685a"     # error
+orange = "#FD971F"  # rainbow orange
+yellow = "#ffaa00"  # warning
+green = "#44b340"   # comments
+cyan = "#2ec09c"    # strings
+blue = "#8fa9c4"    # muted steel blue
+magenta = "#c989c4" # muted mauve
+brown = "#8a7f6a"
+
+# The brighter slots carry the remaining naysayer faces
+bright_red = "#e08d80"
+bright_yellow = "#E6DB74"  # rainbow yellow
+bright_green = "#8cde94"   # types, macros, punctuation
+bright_cyan = "#7ad0c6"    # constants, numbers
+bright_blue = "#c1d1e3"    # variables, methods
+bright_magenta = "#AE81FF" # rainbow violet
+
+muted = "#126367" # line numbers, gutters, inactive text

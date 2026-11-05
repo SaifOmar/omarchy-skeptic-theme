@@ -1,0 +1,96 @@
+# Unified naysayer btop theme: everything stays in the teal/tan palette,
+# no magenta frames, no pure red or hot pink.
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#062329"
+
+# Main text color
+theme[main_fg]="#d1b897"
+
+# Title color for boxes
+theme[title]="#8a7f6a"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#2ec09c"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#1c5a63"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#8cde94"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#126367"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#e6d9c3"
+
+# Background color of the percentage meters
+theme[meter_bg]="#1c5a63"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#e6d9c3"
+
+# CPU, Memory, Network, Proc box outline colors — all muted variants of one hue family
+theme[cpu_box]="#7ad0c6"
+theme[mem_box]="#8cde94"
+theme[net_box]="#8fa9c4"
+theme[proc_box]="#d1b897"
+
+# Box divider line and small boxes line color
+theme[div_line]="#126367"
+
+# Temperature graph color (muted sage green -> tan amber -> muted brick red)
+theme[temp_start]="#8cde94"
+theme[temp_mid]="#ffaa00"
+theme[temp_end]="#d1685a"
+
+# CPU graph colors (teal -> steel blue, staying inside the palette)
+theme[cpu_start]="#2ec09c"
+theme[cpu_mid]="#7ad0c6"
+theme[cpu_end]="#8fa9c4"
+
+# Mem/Disk free meter (steel blue -> sage -> teal)
+theme[free_start]="#8fa9c4"
+theme[free_mid]="#8cde94"
+theme[free_end]="#2ec09c"
+
+# Mem/Disk cached meter (sage -> teal -> steel blue)
+theme[cached_start]="#8cde94"
+theme[cached_mid]="#2ec09c"
+theme[cached_end]="#8fa9c4"
+
+# Mem/Disk available meter (tan amber -> muted brick)
+theme[available_start]="#ffaa00"
+theme[available_mid]="#d1685a"
+theme[available_end]="#e08d80"
+
+# Mem/Disk used meter (sage green -> teal -> steel blue)
+theme[used_start]="#44b340"
+theme[used_mid]="#2ec09c"
+theme[used_end]="#8fa9c4"
+
+# Download graph colors (amber -> muted brick, softened)
+theme[download_start]="#ffaa00"
+theme[download_mid]="#d1685a"
+theme[download_end]="#e08d80"
+
+# Upload graph colors (sage green -> teal -> steel blue)
+theme[upload_start]="#44b340"
+theme[upload_mid]="#2ec09c"
+theme[upload_end]="#8fa9c4"
+
+# Process box color gradient for threads, mem and cpu usage (teal -> steel blue, no magenta)
+theme[process_start]="#2ec09c"
+theme[process_mid]="#7ad0c6"
+theme[process_end]="#8fa9c4"
+
+# Graph gradient colors (spectrum shades from background to foreground)
+theme[gradient_color_0]="#062329"
+theme[gradient_color_1]="#0b3335"
+theme[gradient_color_2]="#1c5a63"
+theme[gradient_color_3]="#126367"
+theme[gradient_color_4]="#8a7f6a"
+theme[gradient_color_5]="#d1b897"
+theme[gradient_color_6]="#e6d9c3"
+theme[gradient_color_7]="#ffffff"
