@@ -1,49 +1,42 @@
-# Omnaysayer
+# Omarchy Skeptic Theme
 
-An [Omarchy](https://omarchy.org/) *Linux* theme that ports **naysayer**, an Emacs theme inspired by Jonathan Blow's compiler livestreams, to the whole desktop — terminal, shell, launcher, btop, and Neovim.
+An [Omarchy](https://omarchy.org/) theme that ports **naysayer**, an Emacs theme
+inspired by Jonathan Blow's compiler livestreams, to the whole desktop —
+terminal, shell, launcher, btop, VS Code, and Neovim.
 
-Deep teal background, warm tan text, and the muted sage/cyan syntax colors from naysayer-theme.el.
+Deep teal background, warm tan text, and the muted sage/cyan syntax colors from
+[naysayer-theme.el](https://github.com/nickav/naysayer-theme.el).
 
-## Credits
-
-- Based on [naysayer-theme.el](https://github.com/nickav/naysayer-theme.el) by [nickav](https://github.com/nickav) — an Emacs theme inspired by Jonathan Blow's compiler livestreams.
-- `extras/naysayer.lua` is a port of that theme's font-lock faces to Neovim ([LazyVim](https://github.com/LazyVim/LazyVim) / aether.nvim) and is licensed GPLv3, like the original.
+![Skeptic background](backgrounds/1-skeptic.jpg)
 
 ## Install
 
 ```bash
-omarchy theme install https://github.com/SaifOmar/omarchy-naysayer-theme.git
+omarchy theme install https://github.com/SaifOmar/omarchy-skeptic-theme.git
 ```
 
-## Showcase
+## Neovim
 
-| Component | Look |
-| --- | --- |
-| Shell, terminals, Neovim, btop | Unified teal/tan palette |
+Colors on Neovim come from the companion colorscheme plugin:
 
-## Extras
-
-### Neovim (optional)
-
-Omarchy does not stage `.lua` files from themes installed from git repos, so the
-faithful naysayer syntax mapping is bundled under `extras/`. Copy it into your
-Neovim plugins folder to load it at startup:
-
-```bash
-cp ~/.config/omarchy/themes/naysayer/extras/naysayer.lua ~/.config/nvim/lua/plugins/naysayer.lua
+```lua
+{
+  "SaifOmar/skeptic.nvim",
+  dependencies = { { "omacom/aether.nvim", branch = "v3" } },
+  priority = 1000,
+},
+{ "LazyVim/LazyVim", opts = { colorscheme = "skeptic" } },
 ```
 
-It requires [LazyVim](https://github.com/LazyVim/LazyVim) (which Omarchy ships by default) and [omacom/aether.nvim](https://github.com/omacom/aether.nvim).
+The theme also bundles the same file under `extras/` for setups
+without LazyVim.
 
-## Customizing
+## Credits
 
-Overlay your own colors: copy `colors.toml` to a directory of the same name under `~/.config/omarchy/themes/naysayer/` and edit it, then re-apply:
-
-```bash
-omarchy theme set naysayer
-```
-
-Your own backgrounds live in `~/.config/omarchy/backgrounds/naysayer/`.
+- Based on [naysayer-theme.el](https://github.com/nickav/naysayer-theme.el)
+by [nickav](https://github.com/nickav) — an Emacs theme inspired by Jonathan
+Blow's compiler livestreams.
+- Neovim colors built on [aether.nvim](https://github.com/omacom/aether.nvim).
 
 ## Colors
 
