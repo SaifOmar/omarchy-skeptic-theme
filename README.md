@@ -7,50 +7,13 @@ terminal, shell, launcher, btop, VS Code, and Neovim.
 Deep teal background, warm tan text, and the muted sage/cyan syntax colors from
 [naysayer-theme.el](https://github.com/nickav/naysayer-theme.el).
 
-![Skeptic background](backgrounds/1-skeptic.jpg)
+![Skeptic](preview.png)
 
 ## Install
 
 ```bash
 omarchy theme install https://github.com/SaifOmar/omarchy-skeptic-theme.git
 ```
-
-## Neovim
-
-Colors on Neovim come from the companion colorscheme plugin:
-
-```lua
-{
-  "SaifOmar/skeptic.nvim",
-  dependencies = { { "omacom/aether.nvim", branch = "v3" } },
-  priority = 1000,
-},
-{ "LazyVim/LazyVim", opts = { colorscheme = "skeptic" } },
-```
-
-The theme also bundles the same file under `extras/` for setups
-without LazyVim.
-
-## File listing (eza)
-
-`eza.yml` themes Omarchy's `ls` alias. Point eza at the active theme once:
-
-```bash
-mkdir -p ~/.config/eza
-ln -sfn ~/.local/state/omarchy/current/theme/eza.yml ~/.config/eza/theme.yml
-```
-
-Executables stay green; directories, permissions, sizes, dates and git state
-all sit in the steel-blue / cyan / sage family. Nothing in the listing is red
-or amber.
-
-## Errors stay red
-
-Red and yellow are reserved for real errors and warnings — diagnostics,
-`ErrorMsg`, terminal ANSI 1/3, VS Code problems. Decorative accents (tags,
-completion kinds, headings, rainbow delimiters, file types) use the theme's
-teal, sage and light-blue colours instead, so a red character on screen means
-something is actually wrong.
 
 ## Credits
 
