@@ -30,8 +30,9 @@ local groups = {
 	CursorIM = { fg = C.bg, bg = C.cursor },
 	Visual = { bg = C.selection },
 	VisualNOS = { bg = C.selection },
+	Substitute = { bg = C.selection, fg = C.keyword },
 	Search = { bg = C.selection, fg = C.keyword },
-	IncSearch = { bg = C.yellow, fg = C.bg },
+	IncSearch = { bg = C.constant, fg = C.bg, bold = true },
 	CurSearch = "IncSearch",
 	LineNr = { fg = C.gutter },
 	LineNrAbove = { fg = C.gutter },
@@ -103,6 +104,7 @@ local groups = {
 	PreCondit = { fg = C.type },
 	Special = { fg = C.type },
 	Delimiter = { fg = C.fg },
+	Tag = { fg = C.type },
 	Operator = { fg = C.fg },
 	Label = { fg = C.type },
 	Todo = { fg = C.bg, bg = C.warning, bold = true },
@@ -159,6 +161,10 @@ local groups = {
 	["@punctuation.delimiter"] = { fg = C.fg },
 	["@punctuation.special"] = { fg = C.fg },
 	["@tag"] = "Type",
+	-- aether paints these two error-red, which turns every React component in
+	-- a .tsx/.jsx file red. Keep them with the rest of the tags.
+	["@tag.tsx"] = "Type",
+	["@tag.javascript"] = "Type",
 	["@tag.attribute"] = { fg = C.variable },
 	["@tag.delimiter"] = { fg = C.fg },
 	["@markup.heading"] = { fg = C.keyword, bold = true },
@@ -169,12 +175,13 @@ local groups = {
 	["@markup.raw"] = "String",
 	["@markup.quote"] = "Comment",
 
-	-- Rainbow delimiters, in naysayer's rotation
-	RainbowDelimiterRed = { fg = "#F92672" },
-	RainbowDelimiterOrange = { fg = "#FD971F" },
-	RainbowDelimiterYellow = { fg = "#E6DB74" },
-	RainbowDelimiterGreen = { fg = "#A6E22E" },
-	RainbowDelimiterBlue = { fg = "#66D9EF" },
+	-- Rainbow delimiters, cooled into the teal/steel family (violet kept for
+	-- the last hue step). Errors and warnings stay red/yellow elsewhere.
+	RainbowDelimiterRed = { fg = "#c1d1e3" },
+	RainbowDelimiterOrange = { fg = "#7ad0c6" },
+	RainbowDelimiterYellow = { fg = "#8cde94" },
+	RainbowDelimiterGreen = { fg = "#2ec09c" },
+	RainbowDelimiterBlue = { fg = "#8fa9c4" },
 	RainbowDelimiterViolet = { fg = "#AE81FF" },
 	RainbowDelimiterCyan = { fg = "#A1EFE4" },
 }
@@ -246,17 +253,21 @@ return {
 				bright_fg = C.keyword,
 				muted = C.gutter,
 
-				red = C.error,
-				yellow = C.yellow,
-				orange = "#FD971F",
+				-- aether's "red"/"yellow"/"orange" slots are decorative: they
+				-- paint tags, plugin chrome, completion kinds and headings, not
+				-- diagnostics. Diagnostics use c.error/c.warning (set in
+				-- on_colors below) and stay red and yellow.
+				red = "#8fa9c4",          -- steel blue, was error red
+				yellow = "#8cde94",       -- sage green, was amber
+				orange = "#7ad0c6",       -- bright cyan, was orange
 				green = C.comment,
 				cyan = C.string,
 				blue = "#66D9EF",
 				magenta = "#FD5FF0",
 				brown = "#7b5b55",
 
-				bright_red = "#ff3333",
-				bright_yellow = "#f0e68c",
+				bright_red = "#c1d1e3",   -- light steel, was #ff3333
+				bright_yellow = "#a8eef5", -- ice cyan, was #f0e68c
 				bright_green = "#6ad966",
 				bright_cyan = "#5dd9c4",
 				bright_blue = "#8ae7f2",
@@ -284,6 +295,15 @@ return {
 				c.warning = C.warning
 				c.hint = C.type
 				c.info = C.string
+
+				-- Neovim's :terminal palette is derived from the decorative
+				-- slots above, so put ANSI 1/3 back to real red and yellow.
+				-- Compiler output inside :terminal should still look like
+				-- errors and warnings.
+				c.terminal.red = C.error
+				c.terminal.red_bright = "#ff3333"
+				c.terminal.yellow = C.warning
+				c.terminal.yellow_bright = "#f0e68c"
 			end,
 		},
 		init = function()

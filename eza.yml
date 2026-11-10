@@ -1,0 +1,107 @@
+colourful: true
+foreground: "#d1b897"
+
+# eza/ls colours for the Skeptic palette. Everything decorative lives in the
+# teal / sage / steel-blue family; nothing here is red or amber. Executables
+# stay green, which is the one file-kind colour worth keeping loud.
+
+filekinds:
+  normal:        { foreground: "#d1b897" }
+  directory:     { foreground: "#8fa9c4", bold: true }
+  symlink:       { foreground: "#7ad0c6" }
+  pipe:          { foreground: "#8fa9c4" }
+  block_device:  { foreground: "#8fa9c4" }
+  char_device:   { foreground: "#8fa9c4" }
+  socket:        { foreground: "#7ad0c6" }
+  special:       { foreground: "#8fa9c4" }
+  executable:    { foreground: "#8cde94", bold: true }
+  mount_point:   { foreground: "#7ad0c6", bold: true }
+
+perms:
+  user_read:         { foreground: "#8fa9c4" }
+  user_write:        { foreground: "#c1d1e3" }
+  user_execute_file: { foreground: "#8cde94", bold: true }
+  user_execute_other: { foreground: "#8cde94" }
+  group_read:        { foreground: "#8fa9c4" }
+  group_write:       { foreground: "#c1d1e3" }
+  group_execute:     { foreground: "#8cde94" }
+  other_read:        { foreground: "#8fa9c4" }
+  other_write:       { foreground: "#c1d1e3" }
+  other_execute:     { foreground: "#8cde94" }
+  special_user_file: { foreground: "#c1d1e3", bold: true }
+  special_other:     { foreground: "#8a7f6a" }
+  attribute:         { foreground: "#126367" }
+
+size:
+  major:         { foreground: "#8fa9c4" }
+  minor:         { foreground: "#7ad0c6" }
+  number_byte:   { foreground: "#8fa9c4" }
+  number_kilo:   { foreground: "#8fa9c4" }
+  number_mega:   { foreground: "#8fa9c4" }
+  number_giga:   { foreground: "#8fa9c4" }
+  number_huge:   { foreground: "#8fa9c4" }
+  unit_byte:     { foreground: "#7ad0c6" }
+  unit_kilo:     { foreground: "#7ad0c6" }
+  unit_mega:     { foreground: "#7ad0c6" }
+  unit_giga:     { foreground: "#7ad0c6" }
+  unit_huge:     { foreground: "#7ad0c6" }
+
+users:
+  user_you:     { foreground: "#c1d1e3" }
+  user_root:    { foreground: "#d1b897", bold: true }
+  user_other:   { foreground: "#8fa9c4" }
+  group_yours:  { foreground: "#c1d1e3" }
+  group_other:  { foreground: "#8fa9c4" }
+  group_root:   { foreground: "#d1b897", bold: true }
+
+links:
+  normal:          { foreground: "#7ad0c6" }
+  multi_link_file: { foreground: "#7ad0c6", underline: true }
+
+git:
+  new:        { foreground: "#8cde94" }
+  modified:   { foreground: "#7ad0c6" }
+  deleted:    { foreground: "#8fa9c4" }
+  renamed:    { foreground: "#c1d1e3" }
+  typechange: { foreground: "#7ad0c6" }
+  ignored:    { foreground: "#126367" }
+  conflicted: { foreground: "#d1b897", bold: true }
+
+git_repo:
+  branch_main:  { foreground: "#c1d1e3" }
+  branch_other: { foreground: "#8fa9c4" }
+  git_clean:    { foreground: "#8cde94" }
+  git_dirty:    { foreground: "#d1b897" }
+
+security_context:
+  colon: { foreground: "#126367" }
+  user:  { foreground: "#c1d1e3" }
+  role:  { foreground: "#8fa9c4" }
+  typ:   { foreground: "#8fa9c4" }
+  range: { foreground: "#8fa9c4" }
+
+file_type:
+  image:       { foreground: "#c1d1e3" }
+  video:       { foreground: "#8fa9c4" }
+  music:       { foreground: "#7ad0c6" }
+  lossless:    { foreground: "#7ad0c6" }
+  crypto:      { foreground: "#8cde94" }
+  document:    { foreground: "#c1d1e3" }
+  compressed:  { foreground: "#7ad0c6" }
+  temp:        { foreground: "#8a7f6a" }
+  compiled:    { foreground: "#8fa9c4" }
+  build:       { foreground: "#8fa9c4" }
+  source:      { foreground: "#8cde94" }
+
+punctuation:         { foreground: "#126367" }
+date:                { foreground: "#8a7f6a" }
+inode:               { foreground: "#8fa9c4" }
+blocks:              { foreground: "#8fa9c4" }
+header:              { foreground: "#c1d1e3", bold: true }
+octal:               { foreground: "#7ad0c6" }
+flags:               { foreground: "#8a7f6a" }
+
+symlink_path:        { foreground: "#7ad0c6" }
+control_char:        { foreground: "#8a7f6a" }
+broken_symlink:      { foreground: "#d1b897", underline: true }
+broken_path_overlay: { foreground: "#d1b897", underline: true }
